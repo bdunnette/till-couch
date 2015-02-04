@@ -5,6 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'CornerCouch',
   'ngGrid',
+  'ui.utils.masks',
   'myApp.view1',
   'myApp.view2',
   'myApp.version'

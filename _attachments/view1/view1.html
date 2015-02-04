@@ -1,1 +1,18 @@
-<p>This is the partial for view 1.</p>
+<form name="formEditProduct" ng-submit="saveProduct()">
+    <fieldset>
+        <label>Product Name</label>
+        <input type="text" ng-model="editingProduct.name" required>
+    </fieldset>
+    <fieldset>
+        <label>List Price</label>
+        <input type="text" ng-model="editingProduct.listPrice" required ui-money-mask>
+    </fieldset>
+    <fieldset>
+        <label>Taxable</label>
+        <input type="checkbox" ng-model="editingProduct.taxable">
+    </fieldset>
+    <button class="submit btn btn-success" ng-disabled="formEditProduct.$invalid">Save Changes</button>
+</form>
+<ul>
+  <li ng-repeat="product in productDB.rows" ng-click="rowClick($index)">{{product.doc.name}}: {{product.doc.listPrice|currency}}</li>
+</ul>
