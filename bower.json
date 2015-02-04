@@ -12,6 +12,7 @@
     "angular-mocks": "~1.2.x",
     "bootstrap": "~3.3.2",
     "fontawesome": "~4.3.0",
-    "CornerCouch": "*"
+    "CornerCouch": "*",
+    "ng-grid": "~2.0.14"
   }
 }

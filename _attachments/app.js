@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'CornerCouch',
+  'ngGrid',
   'myApp.view1',
   'myApp.view2',
   'myApp.version'
@@ -12,7 +13,7 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]).
 run(function($rootScope, cornercouch) {
-$rootScope.server = cornercouch();
-$rootScope.server.session();
+  $rootScope.server = cornercouch();
+  $rootScope.server.session();
 });
 
