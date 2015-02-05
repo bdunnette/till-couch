@@ -1,5 +1,6 @@
 <p>This is the partial for view 2.</p>
 <p>
   Showing of 'interpolate' filter:
+  <p ng-repeat="product in productDB.rows">{{product}}</p>
   {{ 'Current version is v%VERSION%.' | interpolate }}
 </p>
