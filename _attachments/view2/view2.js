@@ -9,6 +9,13 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+  $scope.productDB = $rootScope.server.getDB('till');
+  $scope.saleDB = $rootScope.server.getDB('till');
+  $scope.customerDB = $rootScope.server.getDB('till');
 
+  $scope.editingSale = $scope.saleDB.newDoc();  
+
+  $scope.productDB.query("till", "products", { include_docs: true });
+  console.log($scope.productDB);
 }]);
